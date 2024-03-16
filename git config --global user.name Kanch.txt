@@ -1,0 +1,47 @@
+git config --global user.name "Kanchanshri"
+
+##if already exits: 
+git config --global --replace-all user.name "Kanchanshri"
+
+git config --global user.email "kanchanshri@gmail.com"
+
+##configuring editor
+git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe'"
+
+##to check git configuration
+git config --list
+
+##initialize git
+git init
+
+git remote add origin https://github.com/Kanchanshri/DataEngineeringUdemy/
+
+##check which git origin our git is configured
+git remote -v
+
+## check branches
+git branch -vv
+
+## to check files which are not staged or added
+git status
+
+## to add all files
+ git add .
+
+## commit the files
+
+git commit -m "First Push"
+git push -u -f origin master
+
+## creating a new branch
+git checkout -b test-branch master
+
+now check the branches
+$ git branch -vv
+  master      a030ba0 [origin/master] First Push
+* test-branch a030ba0 First Push
+
+
+
+
+
