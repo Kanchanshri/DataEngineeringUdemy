@@ -1,0 +1,81 @@
+git config --global user.name "Kanchanshri"
+
+##if already exits: 
+git config --global --replace-all user.name "Kanchanshri"
+
+git config --global user.email "kanchanshri@gmail.com"
+
+##configuring editor
+git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe'"
+
+##to check git configuration
+git config --list
+
+##initialize git
+git init
+
+git remote add origin https://github.com/Kanchanshri/DataEngineeringUdemy/
+
+##check which git origin our git is configured
+git remote -v
+
+## check branches
+git branch -vv
+
+## to check files which are not staged or added
+git status
+
+## to add all files
+ git add .
+
+## commit the files
+
+git commit -m "First Push"
+git push -u -f origin master
+
+## creating a new branch
+git checkout -b test-branch master
+
+now check the branches
+$ git branch -vv
+  master      a030ba0 [origin/master] First Push
+* test-branch a030ba0 First Push
+
+## after adding new file in repo
+git commit -m "updated h1 tag"
+
+## switch to master branch
+git checkout master
+
+### since test-branch does not exist on remote we need to set the upstram
+git push --set-upstream origin test-branch
+
+### after creating a new branch online, you need to fetch it on git bash, then only you can see it on git bash
+git fetch --all
+git branch -r  -------to see all the branches
+
+### to delete a remote branch on terminal, we need to make a push
+git push -d origin Created-online
+
+### to delete a branch locally(this will not delete from remote that means not delete from git repo)
+git push -d  test-branch
+
+#### merge conflict: happens when two developers modify the same file and the same line of code at the same time
+to merge branch with master branch , go to the master branch and type following command
+git merge branch-1
+git status
+git push
+
+### revert the commit
+get the commit id and using that id revertthe commit
+git log --oneline -----to get the commit id
+git revert a030ba0
+git status
+git push
+
+###git stash allows to store the copy of your work
+
+
+
+
+
